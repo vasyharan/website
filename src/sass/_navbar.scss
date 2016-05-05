@@ -1,0 +1,76 @@
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300italic);
+//@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic);
+//@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:300italic);
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic);
+//|Source+Sans+Pro|Merriweather+Sans|Open+Sans
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+.navbar {
+  @extend .navbar;
+  //@extend .navbar-dark;
+  //@extend .bg-inverse;
+  @extend .navbar-full;
+  position: fixed;
+  left: 0; top: 0;
+
+  a {
+    color: #1B1B1B;
+  }
+
+  & > .brand {
+    @extend .navbar-brand;
+    //font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    //text-transform: uppercase;
+
+    //transition: 0.2s linear;
+
+    @mixin underline-content {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background: #1B1B1B;
+    }
+
+    &:before {
+      @include underline-content();
+      left: 0;
+      transition: width 0s ease, background .5s ease;
+    }
+    &:after {
+      @include underline-content();
+      right: 0;
+      transition: width 0.55s ease-in;
+    }
+
+    &:hover {
+      //text-decoration: underline;
+      //color: #333;
+
+      &:before {
+        width: 100%;
+        transition: width .5s ease;
+      }
+
+      &:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease-in;
+      }
+    }
+  }
+
+  & > .social {
+    @extend .hidden-sm-up;
+
+    float: right;
+  }
+}

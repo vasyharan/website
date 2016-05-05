@@ -1,0 +1,51 @@
+.social {
+  padding: 0.5rem 1rem;
+  height: 3.35em;
+  position: fixed;
+  bottom: 0; top: auto; right: 0;
+
+  @media (min-width: 28em) {
+    top: 0; bottom: auto;
+  }
+
+  ul {
+    @extend .nav;
+    @extend .navbar-nav;
+    @include clearfix;
+    float: right;
+
+    li {
+      @extend .nav-item;
+
+      a {
+        @extend .nav-link;
+        color: #1B1B1B;
+      }
+    }
+  }
+}
+
+.attributions {
+  padding: 0 ($grid-gutter-width / 2);
+  //height: 3.35em;
+  position: fixed;
+  width: 100%; bottom: 0; top: auto;
+
+  ul {
+    @extend .nav;
+    @extend .navbar-nav;
+    @include clearfix;
+    //float: right;
+    font-size: 70%;
+
+    li {
+      //@extend .nav-item;
+      color: #1B1B1B;
+
+      a {
+        //@extend .nav-link;
+        color: #000;
+      }
+    }
+  }
+}

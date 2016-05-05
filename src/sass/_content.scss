@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -3.35em;
+}
+
+.content {
+  //@extend .container;
+  //@extend .row;
+  //@extend .col-sm-12;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  background: url('/images/photo-desert.jpg');
+  -webkit-filter: saturate(2.5) sepia(0.5);
+  //position: fixed;
+
+  /*&:before {
+    content: "";
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    background: url('/images/photo-desert.jpg');
+    filter: grayscale(100%);
+  }*/
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  div {
+    @extend .col-sm-12;
+  }
+
+  p {
+    @extend .lead;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      @extend .lead;
+      margin-bottom: 0.125rem;
+
+      span {
+        padding: 0 1.25rem;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    background: #fff;
+    padding: 0 0.25rem;
+  }
+}

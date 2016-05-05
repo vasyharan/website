@@ -1,0 +1,11 @@
+$enable-flex: true;
+@import "bootstrap";
+@import "font-awesome";
+
+@import "navbar";
+@import "footer";
+@import "content";
+
+body {
+  min-width: 20em;
+}
