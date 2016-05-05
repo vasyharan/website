@@ -4,6 +4,7 @@
     <title>Thirukumaran Vaseeharan | Software Engineer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src="//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   </head>
   <body onload="handleBodyLoad()">
     <nav class="navbar">
@@ -40,6 +41,21 @@
 
     <link rel='stylesheet' href='/css/main.css'>
     <script>
+      // fonts
+      WebFontConfig = {
+        google: {
+          families: ['Open Sans:300,400italic'],
+          text: 'abcdefghijklmnopqrstuvwxyz'
+        }
+      };
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+
+
+      // animation
       (function(window, document) {
         var start = null;
         var imageLoaded = false, bodyLoaded = false;
