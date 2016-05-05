@@ -1,8 +1,14 @@
 $enable-flex: true;
 @import "bootstrap";
+/* @import "bootstrap-grid";
+@import "mixins";
+@import "nav";
+@import "navbar";
+@import "type"; */
+
 @import "font-awesome";
 
-@import "navbar";
+@import "navmenu";
 @import "footer";
 @import "content";
 

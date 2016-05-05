@@ -34,12 +34,27 @@ html, body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 
+  &.animate {
+    ul li {
+      transform: translate3d(-24em, 0, 0);
+    }
+
+    p {
+      //max-height: 0;
+      transform: scaleY(0);
+    }
+  }
+
   div {
     @extend .col-sm-12;
   }
 
   p {
     @extend .lead;
+    //overflow: hidden;
+    transition: transform 0.8s ease;
+    transform: scaleY(1);
+    //max-height: 1.875em;
   }
 
   ul {
@@ -49,9 +64,23 @@ html, body {
     li {
       @extend .lead;
       margin-bottom: 0.125rem;
+      transform: translate3d(0, 0, 0);
 
       span {
         padding: 0 1.25rem;
+      }
+
+      &:nth-child(1) {
+        //transition: transform 0.8s 0s ease-out;
+        transition: transform 0.8s 0.4s ease-out;
+      }
+      &:nth-child(2) {
+        //transition: transform 0.8s 0.28s ease-out;
+        transition: transform 0.8s 0.95s ease-out;
+      }
+      &:nth-child(3) {
+        //transition: transform 0.8s 0.645s ease-out;
+        transition: transform 0.8s 1.8s ease-out;
       }
     }
   }

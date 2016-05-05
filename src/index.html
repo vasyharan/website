@@ -5,18 +5,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
     <link rel='stylesheet' href='/css/main.css'>
   </head>
-  <body>
+  <body onload="animate()">
     <nav class="navbar">
       <a class="brand" href="/">Thirukumaran Vaseeharan</a>
     </nav>
 
-    <section class="content">
+    <section id='content' class="content animate">
       <div>
-        <p><span>Hi. I'm:</span></p>
+        <p><span>Hi. I am</span></p>
         <ul>
           <li><span>A software developer.</span></li>
-          <li><span>Ex-Amazonian.</span></li>
-          <li><span>University of Waterloo alum.</span></li>
+          <li><span>An ex-Amazonian.</span></li>
+          <li><span>A University of Waterloo alum.</span></li>
         </ul>
       </div>
 
@@ -37,6 +37,20 @@
         <li>background photo <a href="//flic.kr/p/2v2xLD">Desert</a> by <a href="//www.flickr.com/photos/muriel_vd/">&mu;&mu;</a> / <a href="//creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li>
       </ul>
     </footer>
+    <script>
+      function animate() {
+        setTimeout(function() {
+          document.getElementById('content').classList.remove('animate')
+        }, 500);
+      }
 
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-77334029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
