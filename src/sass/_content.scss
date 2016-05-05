@@ -20,21 +20,14 @@ html, body {
     }
 
     p {
-      //max-height: 0;
       transform: scaleY(0);
     }
   }
 
-  div {
-    //@extend .col-sm-12;
-  }
-
   p {
     @extend .lead;
-    //overflow: hidden;
     transition: transform 0.8s ease;
     transform: scaleY(1);
-    //max-height: 1.875em;
   }
 
   ul {
