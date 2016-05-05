@@ -10,7 +10,7 @@ html, body {
   align-items: center;
   background: url('/images/photo-desert.jpg');
   background-size: cover;
-  -webkit-filter: saturate(2.5) sepia(0.5);
+  filter: saturate(2.5) sepia(0.5);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 

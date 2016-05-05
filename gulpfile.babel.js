@@ -1,6 +1,8 @@
 import gulp from 'gulp'
 import sass from 'gulp-sass'
+import cleancss from 'gulp-clean-css'
 import sourcemaps from 'gulp-sourcemaps'
+import autoprefixer from 'gulp-autoprefixer'
 
 gulp.task('build', ['html', 'images', 'sass', 'fonts'])
 
@@ -34,10 +36,13 @@ gulp.task('sass', () => (
     .pipe(sourcemaps.init())
     .pipe(sass({
       "includePaths": [
-        "./node_modules/bootstrap/scss",
-        "./node_modules/font-awesome/scss/"
+        "./node_modules"
       ]
     }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(cleancss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
 ))

@@ -13,14 +13,32 @@
     @extend .navbar-nav;
     @include clearfix;
     float: right;
+  }
 
-    li {
-      @extend .nav-item;
+  li {
+    @extend .nav-item;
+  }
 
-      a {
-        @extend .nav-link;
-        color: #1B1B1B;
-      }
+  a {
+    @extend .nav-link;
+    color: #1B1B1B;
+  }
+
+  .fa {
+    &.github:before {
+      content: $fa-var-github-alt;
+    }
+    &.linkedin:before {
+      content: $fa-var-linkedin;
+    }
+    &.instagram:before {
+      content: $fa-var-instagram;
+    }
+    &.facebook:before {
+      content: $fa-var-facebook-official;
+    }
+    &.envelope:before {
+      content: $fa-var-envelope;
     }
   }
 }
