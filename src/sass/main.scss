@@ -1,10 +1,12 @@
 $enable-flex: true;
-@import "bootstrap";
-/* @import "bootstrap-grid";
+//@import "bootstrap";
+
+@import "bootstrap-reboot";
+//@import "bootstrap-grid";
 @import "mixins";
 @import "nav";
 @import "navbar";
-@import "type"; */
+@import "type";
 
 @import "font-awesome";
 
