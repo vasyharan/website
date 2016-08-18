@@ -1,10 +1,11 @@
 .social {
   padding: 0.5rem 1rem;
-  height: 3.35em;
   position: fixed;
-  bottom: 0; top: auto; right: 0;
+  top: auto;
+  right: 0;
+  bottom: 1rem;
 
-  @media (min-width: 28em) {
+  @media (min-width: 28rem) {
     top: 0; bottom: auto;
   }
 
@@ -21,10 +22,14 @@
 
   a {
     @extend .nav-link;
-    color: #1B1B1B;
+    color: $gray-dark;
   }
 
   .fa {
+    @media (min-width: 28rem) {
+      color: #f0f0f0;
+    }
+
     &.github:before {
       content: $fa-var-github-alt;
     }
@@ -44,21 +49,30 @@
 }
 
 .attributions {
-  padding: 0 ($grid-gutter-width / 2);
   //height: 3.35em;
   position: fixed;
   width: 100%; bottom: 0; top: auto;
+  background: rgba(255, 255, 255, 0.55);
+
+  .show-md {
+    display: none;
+
+    @media (min-width: 28em) {
+      display: inline-block;
+    }
+  }
 
   ul {
     @extend .nav;
     @extend .navbar-nav;
     @include clearfix;
     //float: right;
-    font-size: 70%;
+    font-size: 75%;
 
     li {
       //@extend .nav-item;
-      color: #1B1B1B;
+      padding: 0 ($grid-gutter-width / 4);
+      color: $gray-dark;
 
       a {
         //@extend .nav-link;
