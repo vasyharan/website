@@ -4,6 +4,7 @@ import cleancss from 'gulp-clean-css'
 import sourcemaps from 'gulp-sourcemaps'
 import autoprefixer from 'gulp-autoprefixer'
 
+gulp.task('default', ['build'])
 gulp.task('build', ['html', 'images', 'sass', 'fonts'])
 
 gulp.task('build:watch', ['build', 'html:watch', 'images:watch', 'sass:watch'])

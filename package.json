@@ -7,7 +7,7 @@
     "node": "5.10.1"
   },
   "scripts": {
-    "dev": "node webpack.js"
+    "build": "gulp"
   },
   "author": "Vaseeharan Thirukumaran <vasyharan@gmail.com> (http://github.com/vasyharan)",
   "license": "UNLICENSED",
