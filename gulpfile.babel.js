@@ -5,7 +5,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import autoprefixer from 'gulp-autoprefixer'
 
 gulp.task('default', ['build'])
-gulp.task('build', ['html', 'images', 'sass', 'fonts'])
+gulp.task('build', ['html', 'keybase', 'images', 'sass', 'fonts'])
 
 gulp.task('build:watch', ['build', 'html:watch', 'images:watch', 'sass:watch'])
 
@@ -24,11 +24,16 @@ gulp.task('images:watch', ['images'], () => (
 ))
 
 gulp.task('html', () => (
-  gulp.src('./src/**/*.html')
+  gulp.src(['./src/**/*.html'])
     .pipe(gulp.dest('./dist'))
 ))
 
-gulp.task('html:watch', ['html'], () => (
+gulp.task('keybase', () => (
+  gulp.src(['./src/keybase.txt'])
+    .pipe(gulp.dest('./dist/.well-known'))
+))
+
+gulp.task('html:watch', ['keybase', 'html'], () => (
   gulp.watch('./src/**/*.html', ['html'])
 ))
 

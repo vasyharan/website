@@ -1,0 +1,45 @@
+{
+    "variables": {
+        "do_api_token": "",
+        "letsencrypt_bzip": "",
+        "iptables_rules_v4": ""
+    },
+    "builders": [{
+        "type": "digitalocean",
+        "name": "web-builder",
+        "api_token": "{{user `do_api_token`}}",
+        "image": "ubuntu-16-04-x64",
+        "region": "nyc1",
+        "size": "512mb",
+        "ssh_username": "root",
+        "snapshot_name": "web-{{isotime \"2006.01.02.15.04.05\"}}"
+    }],
+    "provisioners": [{
+        "type": "file",
+        "source": "{{user `letsencrypt_bzip`}}",
+        "destination": "/tmp/letsencrypt.tar.bz"
+    }, {
+        "type": "file",
+        "source": "{{user `iptables_rules_v4`}}",
+        "destination": "/tmp/iptables_rules_v4"
+    }, {
+        "type": "shell",
+        "inline": [
+            "sleep 30",
+            "curl -sSL https://agent.digitalocean.com/install.sh | sh",
+            "curl -sSL https://get.docker.com/ | sh",
+            "apt-get update -y",
+            "apt-get upgrade -y",
+            "apt-get dist-upgrade -y",
+            "apt-get install -y iptables",
+            "apt-get autoremove -y",
+            "tar -xjf /tmp/letsencrypt.tar.bz -C /",
+            "mv /tmp/iptables_rules_v4 /etc/iptables-rules.v4",
+            "echo \"#!/bin/sh\" > /tmp/iptables-ifupd",
+            "echo \"iptables-restore < /etc/iptables-rules.v4\" >> /tmp/iptables-ifupd",
+            "chmod +x /tmp/iptables-ifupd",
+            "mv /tmp/iptables-ifupd /etc/network/if-up.d/iptables-restore",
+            "openssl dhparam -out /etc/ssl/private/dhparams.pem 2048"
+        ]
+    }]
+}

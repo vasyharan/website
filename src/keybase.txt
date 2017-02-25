@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/haran
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://vasyharan.com
+  * I am haran (https://keybase.io/haran) on keybase.
+  * I have a public key with fingerprint 4B9D 179E 51D9 46B2 977F  CDE9 A158 AB97 FEEB 9A53
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01013cc97e37b0b60d52f4e93b4bac2a91f08d8da5451195080aa4859afdeff07ad20a",
+            "fingerprint": "4b9d179e51d946b2977fcde9a158ab97feeb9a53",
+            "host": "keybase.io",
+            "key_id": "a158ab97feeb9a53",
+            "kid": "01013cc97e37b0b60d52f4e93b4bac2a91f08d8da5451195080aa4859afdeff07ad20a",
+            "uid": "3bdf2f36f41c198a206c1b8ea9fd0819",
+            "username": "haran"
+        },
+        "revoke": {
+            "sig_ids": [
+                "687b8efbccb1929e1d6821fa053cea05e0e2cdd2bc625d8ac30a7b5d7b925cb70f"
+            ]
+        },
+        "service": {
+            "hostname": "vasyharan.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1487990054,
+    "expire_in": 157680000,
+    "prev": "030574290e2a02cede9ad1598e4075860dfbb9679a089f45159be40efedc3705",
+    "seqno": 22,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.64
+Comment: https://keybase.io/crypto
+
+yMJoAnicrVJbaBVHGD6pnkgOaupDGhRRGEOkJSQzuzs7M8f64IVSWomFFPHaw1zj
+kmT3ZHdzbJSIUZSWlrbBUhqEhFLFvFWLt5RSLygS1KYVKhRBbR7aKt598MFbZw/2
+rY+dhxlm5vu///u//z87a1quUHNp18q5dbeOpTUXTj/sy609dKd5GxCR6gfFbaBL
+Vw/drXSSlroCBYoAIohcKRnRLhFQ+FBhx3iaucITXDqcIQOpoopjDyPEMKSQc49i
+xo3SxkDClQM5aAEmCDt1XI6DMLW0nmAKEaYxUszzhcMIMVJpxhGmXDBitBaMY9cG
+bo6SLMKKEzzRrUFk3+ylVJX3H/j/WXdflc4VyjjG9Y2HJGKUO9CXSFDNmVGQIpYB
+Ex2HvEdb9GYe8xAMtIBYV6IunZmaBJ1WcQKKG4BPiY00QkqBmMM0Uj51kOEQu1Lb
+XUPtSKUcIX0HK8qlCzkRWBHBHCwFgQZsstw2XSWQVfLMopepKzzpr6ZvlVGPVVWO
+ozSSUXemKk3LSTGTlfaXM+wWLUovWUoiCJXtkI2o6DgJohAUkUXKNMhokUcJYxBi
+rwXoD8tBrEtBhsDEp9CuLI+uZLa7EBPPYbYEDh2ps5YqhBnVHiSY2jYYIZhPGIeU
+GWs9ZsJ+aaOVdAnEIKurN4xA0XGsTt5pOa11IU/7Yg0GzpzaOD1XU8jV5l/JRjdX
+qHv134EW5RkvttZv+Nofa/i49+LwZH72ivbRJ4fnnmz9cu/ztTOmxMTAwrtXr1cO
+LToYHFk0teab1cH3fi74udJ4/94nS3/oWDXvxsybC5ral4+0N53qaNjZPHS5963X
+c+KjoPGznqerGmZPtp2cfHb0mvvn9GvfNv2US0b2DQ49W/LuztWFX58cxsdfu1uo
+f/RpU77ut3NfNdM1LaMPbobjjev3vn38i9/3+M8P/HJp4+4rbfll+2+MnfgRTxXn
++NH2zs//GB8+WDufbdkxq1QhexYvuz1nFA69s6T3vdE3P7j1xsSZQlv+8l+3/x7v
+JuX5YxMdg40pmfmdPzzv6qDqqx9Z8HhTItcdgUuPvn/+Su32Ff8A6M1XRw==
+=eiAi
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/haran
+
+==================================================================

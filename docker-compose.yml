@@ -1,4 +1,3 @@
-# docker run -d --name website -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt -v /etc/ssl/private:/etc/ssl/private vasyharan/website
 version: '2'
 services:
   nginx:
