@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   nginx:
     build: .
@@ -9,3 +9,7 @@ services:
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - /etc/ssl/private:/etc/ssl/private
+  gogs:
+    image: gogs/gogs
+    volumes:
+      - /srv/gogs:/data
