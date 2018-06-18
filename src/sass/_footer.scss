@@ -28,7 +28,7 @@
 
   a {
     @extend .nav-link;
-    color: $gray-dark;
+    color: $gray-800;
   }
 
   .fa {
@@ -77,8 +77,8 @@
 
     li {
       //@extend .nav-item;
-      padding: 0 ($grid-gutter-width-base / 4);
-      color: $gray-dark;
+      padding: 0 ($grid-gutter-width / 4);
+      color: $gray-800;
 
       a {
         //@extend .nav-link;

@@ -9,6 +9,8 @@ services:
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - /etc/ssl/private:/etc/ssl/private
+    links:
+      - gogs
   gogs:
     image: gogs/gogs
     volumes:

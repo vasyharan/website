@@ -6,20 +6,21 @@
     <script async src='//www.google-analytics.com/analytics.js'></script>
     <script async src='//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js'></script>
   </head>
-  <body onload='handleBodyLoad()'>
+  <body>
     <div class='background'></div>
     <nav class='navbar'>
       <a class='brand' href='/'>Thirukumaran Vaseeharan</a>
     </nav>
 
-    <section id='content' class='content animate'>
+    <section id='content' class='content'>
       <div>
         <p><span>Hi. I am</span></p>
         <ul>
+          <li><span>Thirukumaran Vaseeharan.</span></li>
           <li><span>A software developer.</span></li>
           <li><span>An ex-Amazonian.</span></li>
           <li><span>A University of Waterloo alum.</span></li>
-          <li><span>Currently at <a href='//stripe.com/about#haran'>Stripe</a>.</span></li>
+          <li><span>Currently at Stripe.</span></li>
         </ul>
       </div>
 
@@ -79,43 +80,6 @@
         wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
         s.parentNode.insertBefore(wf, s);
       })(document);
-
-
-      // animation
-      (function(window, document) {
-        var start = null;
-        var imageLoaded = false, bodyLoaded = false;
-        function animationFrame(timestamp) {
-          if (!imageLoaded || !bodyLoaded) {
-            start = null;
-            return;
-          }
-
-          if (!start) start = timestamp;
-          var progress = timestamp - start;
-          if (progress > 250) {
-            document.getElementById('content').classList.remove('animate');
-          } else {
-            requestAnimationFrame(animationFrame);
-          }
-        }
-
-        function handleImageLoad() {
-          imageLoaded = true;
-          requestAnimationFrame(animationFrame);
-        }
-
-        function handleBodyLoad() {
-          bodyLoaded = true;
-          requestAnimationFrame(animationFrame);
-        }
-        window.handleBodyLoad = handleBodyLoad;
-
-        // start the background image loading
-        var img = document.createElement('img');
-        img.addEventListener('load', handleImageLoad);
-        img.src = '/images/google-earth-view-1216.jpg';
-      })(window, document)
 
       // analytics
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
