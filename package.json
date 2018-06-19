@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "vasyharan.com static website",
   "private": true,
-  "engines": {
-    "node": "5.10.1"
-  },
   "scripts": {
     "build": "gulp",
     "build:watch": "gulp build:watch"
@@ -18,9 +15,12 @@
     "bootstrap": "^4.0.0-alpha.4",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.0.3",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.0.0-alpha"
+  },
+  "resolutions": {
+    "natives": "1.1.3"
   }
 }
