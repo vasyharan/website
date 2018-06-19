@@ -1,17 +1,27 @@
-version: '3'
+version: '3.2'
 services:
   nginx:
-    build: .
-    image: vasyharan/website:latest
+    build: ./
+    image: vasyharan/nginx
     ports:
       - '80:80'
       - '443:443'
     volumes:
-      - /etc/letsencrypt:/etc/letsencrypt
-      - /etc/ssl/private:/etc/ssl/private
+      - type: volume
+        source: data-letsencrypt
+        target: /etc/letsencrypt
+      - type: bind
+        source: /etc/ssl/private
+        target: /etc/ssl/private
     links:
       - gogs
   gogs:
     image: gogs/gogs
     volumes:
-      - /srv/gogs:/data
+      - type: volume
+        source: data-gogs
+        target: /data
+
+volumes:
+  data-gogs:
+  data-letsencrypt:

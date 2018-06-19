@@ -1,4 +1,5 @@
-FROM vasyharan/nginx:1.13.3-alpine
+FROM nginx:1.15.0-alpine
 
-COPY server.conf /etc/nginx/servers/default.conf
-COPY dist /usr/share/nginx/html
+RUN mkdir -p /etc/nginx/servers
+COPY nginx/ /etc/nginx/
+COPY dist/ /static/
