@@ -4,6 +4,12 @@ html, body {
   height: 100%;
 }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
 .background {
   background-image: url('/images/google-earth-view-1216.jpg');
   background-repeat: no-repeat;
