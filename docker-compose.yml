@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.5'
 services:
   nginx:
     build: ./
@@ -10,18 +10,34 @@ services:
       - type: volume
         source: data-letsencrypt
         target: /etc/letsencrypt
+      - type: volume
+        source: data-letsencrypt-www
+        target: /var/www/letsencrypt
       - type: bind
         source: /etc/ssl/private
         target: /etc/ssl/private
     links:
       - gogs
+    restart: unless-stopped
   gogs:
     image: gogs/gogs
     volumes:
       - type: volume
         source: data-gogs
         target: /data
+    restart: unless-stopped
+  certbot:
+    build: ./certbot
+    image: vasyharan/certbot
+    volumes:
+      - type: volume
+        source: data-letsencrypt
+        target: /etc/letsencrypt
+      - type: volume
+        source: data-letsencrypt-www
+        target: /var/www/letsencrypt
 
 volumes:
   data-gogs:
   data-letsencrypt:
+  data-letsencrypt-www:
